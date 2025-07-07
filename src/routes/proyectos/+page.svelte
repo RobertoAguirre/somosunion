@@ -1,0 +1,32 @@
+<script lang="ts">
+const proyectos = [
+  {
+    titulo: 'Escala',
+    imagen: '/img/escala-proyecto.jpg',
+    descripcion: 'Conoce la nueva metodología Escala que busca fortalecer pequeños negocios en México.'
+  },
+  {
+    titulo: 'MIFAM Valle Dorado',
+    imagen: '/img/mifam.jpg',
+    descripcion: 'Nuestros programas de ES.PE.RE, EIMESUN, Escala y créditos FIPES llegaron a Valle Dorado, logrando testimonios y logros en la comunidad.'
+  }
+  // Puedes agregar más proyectos aquí
+];
+</script>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h1 class="text-3xl md:text-4xl font-bold text-morado mb-10 text-center">Proyectos</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {#each proyectos as p}
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row items-stretch">
+        <img src={p.imagen} alt={p.titulo} class="w-full md:w-1/3 h-48 object-cover md:rounded-l-2xl md:rounded-r-none rounded-t-2xl md:rounded-t-none" />
+        <div class="flex-1 p-6 flex flex-col justify-between">
+          <div>
+            <h2 class="text-xl font-bold text-morado mb-2">{p.titulo}</h2>
+            <p class="text-gris mb-4">{p.descripcion}</p>
+          </div>
+        </div>
+      </div>
+    {/each}
+  </div>
+</section> 
